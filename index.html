@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Study Buddy Planner v5</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- LOGIN PAGE -->
+    <div id="login-page" class="page active">
+      <div class="card">
+        <h1>AI Study Buddy Planner</h1>
+        <button class="btn google" onclick="googleLogin()">Login with Google</button>
+        <form id="login-form">
+          <input type="text" id="login-username" placeholder="Username" required>
+          <input type="password" id="login-password" placeholder="Password" required>
+          <button type="submit" class="btn">Login</button>
+        </form>
+        <p><a href="#" onclick="showPage('signup-page')">Sign Up</a> | <a href="#" onclick="forgotPassword()">Forgot Password?</a></p>
+      </div>
+    </div>
+
+    <!-- SIGNUP PAGE -->
+    <div id="signup-page" class="page">
+      <div class="card">
+        <h2>Create Account</h2>
+        <form id="signup-form">
+          <input type="text" id="signup-username" placeholder="Choose username" required>
+          <input type="password" id="signup-password" placeholder="Choose password" required>
+          <button type="submit" class="btn">Sign Up</button>
+        </form>
+        <p><a href="#" onclick="showPage('login-page')">Back to Login</a></p>
+      </div>
+    </div>
+
+    <!-- MENU PAGE -->
+    <div id="menu-page" class="page">
+      <h2>Welcome!</h2>
+      <button onclick="showPage('tasks-page')" class="btn">📅 Plan Tasks</button>
+      <button onclick="showPage('pomodoro-page')" class="btn">⏱️ Pomodoro</button>
+      <button onclick="showPage('flashcards-page')" class="btn">🧠 Flashcards</button>
+      <button onclick="showPage('notes-page')" class="btn">📝 Notes</button>
+      <button onclick="showPage('stats-page')" class="btn">📊 Progress</button>
+      <button onclick="logout()" class="btn danger">Logout</button>
+    </div>
+
+    <!-- TASKS PAGE -->
+    <div id="tasks-page" class="page">
+      <h2>Task Planner</h2>
+      <form id="task-form">
+        <input type="text" id="task-title" placeholder="Task name" required>
+        <input type="date" id="task-date" required>
+        <input type="time" id="task-time" required>
+        <button type="submit" class="btn">Add Task</button>
+      </form>
+      <ul id="task-list"></ul>
+      <button onclick="backToMenu()" class="btn">⬅️ Back</button>
+    </div>
+
+    <!-- POMODORO PAGE -->
+    <div id="pomodoro-page" class="page">
+      <h2>Pomodoro Timer</h2>
+      <p id="timer-display">25:00</p>
+      <button onclick="startPomodoro()" class="btn">Start</button>
+      <button onclick="pausePomodoro()" class="btn">Pause</button>
+      <button onclick="resetPomodoro()" class="btn">Reset</button>
+      <button onclick="backToMenu()" class="btn">⬅️ Back</button>
+    </div>
+
+    <!-- FLASHCARDS PAGE -->
+    <div id="flashcards-page" class="page">
+      <h2>Flashcards</h2>
+      <p>Coming soon...</p>
+      <button onclick="backToMenu()" class="btn">⬅️ Back</button>
+    </div>
+
+    <!-- NOTES PAGE -->
+    <div id="notes-page" class="page">
+      <h2>Notes</h2>
+      <textarea id="notes" placeholder="Write notes..."></textarea>
+      <button onclick="backToMenu()" class="btn">⬅️ Back</button>
+    </div>
+
+    <!-- STATS PAGE -->
+    <div id="stats-page" class="page">
+      <h2>Progress</h2>
+      <p>Stats will be displayed here.</p>
+      <button onclick="backToMenu()" class="btn">⬅️ Back</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

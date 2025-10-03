@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  background: linear-gradient(270deg, #89f7fe, #66a6ff);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+.page {display: none; text-align: center; padding: 20px;}
+.page.active {display: block;}
+.card {background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);}
+input, textarea {width: 80%; padding: 10px; margin: 10px 0; font-size: 16px; border-radius: 8px; border: 1px solid #ccc;}
+.btn {margin: 10px; padding: 12px 24px; font-size: 16px; border: none; border-radius: 8px; cursor: pointer; background: #007BFF; color: white;}
+.btn.google {background: #DB4437;}
+.btn.danger {background: #dc3545;}
