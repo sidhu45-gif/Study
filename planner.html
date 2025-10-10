@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planner | AI Study Buddy</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+</head>
+<body class="gradient-bg">
+  <header>
+    <h1>AI Study Buddy Planner</h1>
+    <nav>
+      <a href="index.html" class="btn">Home</a>
+      <a href="about.html" class="btn">About</a>
+    </nav>
+    <button id="themeToggle" class="btn">🌞/🌙</button>
+  </header>
+  <main>
+    <section id="calendar"></section>
+    <section id="extras">
+      <div id="aiTip" class="card"></div>
+      <div id="countdown" class="card"></div>
+      <canvas id="weeklyChart"></canvas>
+      <button id="exportBtn" class="btn">📥 Export CSV</button>
+    </section>
+  </main>
+  <div id="alertCard" class="alert hidden">
+    <div class="alert-content">
+      <h2>⏰ Reminder</h2>
+      <p id="alertText"></p>
+      <button id="dismissAlert" class="btn">Dismiss</button>
+      <button id="snoozeAlert" class="btn">Snooze 5 min</button>
+      <audio id="alertSound" src="ding.mp3"></audio>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

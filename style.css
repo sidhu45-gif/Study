@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+.gradient-bg {
+  background: linear-gradient(-45deg,#6a11cb,#2575fc,#6a11cb);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@keyframes gradient {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+.btn {
+  background:#ffffff33;
+  color:#fff;
+  padding:10px 20px;
+  margin:5px;
+  border-radius:8px;
+  text-decoration:none;
+  display:inline-block;
+  border:none;
+}
+.btn:hover{background:#ffffff55}
+.card{
+  background:#ffffff22;
+  padding:15px;
+  border-radius:10px;
+  margin:10px auto;
+  width:90%;
+  max-width:400px;
+}
+.alert {
+  position:fixed; top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.8);
+  display:flex; align-items:center; justify-content:center;
+}
+.alert.hidden{display:none;}
+.alert-content{
+  background:#fff; color:#333; padding:30px;
+  border-radius:12px; text-align:center;
+}
+header,main{width:100%;text-align:center;}
+#calendar{max-width:800px;margin:20px auto;}
